@@ -198,7 +198,7 @@ class BingImageScraper:
 
 if __name__ == "__main__":
     
-    PROMPT = "An infinite tileable pattern. Black and white. Liquids"
+    PROMPT = "An infinite tileable pattern. No directionnal light. Black and white. Liquids. Space. Lovecraft"
     bing_scraper = BingImageScraper( PROMPT)
     bing_scraper.start()
 
