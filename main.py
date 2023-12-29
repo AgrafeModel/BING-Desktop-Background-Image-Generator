@@ -110,16 +110,19 @@ class BingImageScraper:
     def login_to_microsoft(self):
         print("-----------------Logging in to Microsoft-----------------")
         try:
+            if not self.driver.current_url.startswith("https://login.live.com/"):
+                print("Not on the right page!")
+                return False
             email_box = self.driver.find_element("id", "i0116")
             email_box.send_keys(os.getenv("MICROSOFT_EMAIL"))
             next_btn = self.driver.find_element("id", "idSIButton9")
             next_btn.click()
-            time.sleep(0.5)
+            time.sleep(1)
             password_box = self.driver.find_element("id", "i0118")
             password_box.send_keys(os.getenv("MICROSOFT_PASSWORD"))
             next_btn = self.driver.find_element("id", "idSIButton9")
             next_btn.click()
-            time.sleep(0.5)
+            time.sleep(1)
             stay_signed_in_btn = self.driver.find_element("id", "idSIButton9")
             stay_signed_in_btn.click()
             
@@ -130,6 +133,7 @@ class BingImageScraper:
             print(e)
             return False
     
+
         
 
     def wait_for_image_load(self):
@@ -190,6 +194,7 @@ class BingImageScraper:
                 continue
         return True
     
+
     def reject(self):
         try:
             self.driver.find_element("id", "bnp_btn_reject").click()
