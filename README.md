@@ -41,19 +41,5 @@ Then, just need to wait ! All the images will be downloaded in the `images` fold
     <img src="./examples/4.jpeg" width="200px" />
 </div>
 
-## TODO
-
-- [ ] Add a GUI
-- [ ] Image editing to fit better as a desktop background
-- [ ] ...
-
-## Contributing
-
-Their still some improvements to do, so feel free to contribute to this project by opening an issue or a pull request 😊
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
